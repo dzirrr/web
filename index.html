@@ -156,6 +156,11 @@
 
 <body>
 
+  <audio id="background-music" loop>
+  <source src="Barasuara - Terbuang dalam Waktu.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
   <section id="four-oh-four">
     <div class="bg"></div> <div id="error-container">
       <div class="overlay"></div>
@@ -217,6 +222,13 @@
         }
       });
     });
+
+    // SCRIPT BARU UNTUK MEMUTAR MUSIK SETELAH KLIK
+    document.body.addEventListener('click', function () {
+        const music = document.getElementById('background-music');
+        music.play();
+    }, { once: true });
+
   </script>
 </body>
 
